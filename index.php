@@ -3,7 +3,7 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETEAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE');
 header('Content-Type: application/json');
 include'config.php';
-$query="SELECT * FROM songsdb";
+$query="SELECT * FROM songsdb ORDER BY RAND()";
 $res=mysqli_query($conn,$query) or die('error query');
 if(mysqli_num_rows($res)>0)
 {
